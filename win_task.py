@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import widget as C 
 import customtkinter as Ct
 
 
@@ -72,8 +73,10 @@ def task(var_T,var_N,var_D,var_P):
     )
     OptionP.set(var_P)
     OptionP.place(x=20,y=300)
-    # labelDescrible=ttk.Label(root,text=var_D,font=("inder",20),background="white")
-    # labelDescrible.place(x=20,y=150)
+    
+    
+    #Color
+    Colors=C.Color(("#FBE5CB","#F28181","#949393"),(20,350),root)
     
     
     
