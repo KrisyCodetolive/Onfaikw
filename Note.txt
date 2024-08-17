@@ -1,0 +1,59 @@
+Note_
+
+.Comment changer la font d'un texte avec tkinter
+
+l'on peut changer la police d'un texte avec 'font' font est un argument qu'on peut utiliser pour changer la police d'un texte il est présent dans tout les widgets qui affiche du texte like 'Label,Button,Entry,'etc...
+
+*font=("X",Y,Z)
+
+X:Nom de la Font famille
+Y:size,Taille
+Z:style (bold,italic,underline,overstrike)
+Nb:Il faut s'assurer que la police d'ecriture est installer sur votre pc 
+
+.Comment afficher une image dans une fenetre tkinter 
+
+Pour les images png and gif, first of all 
+charger l'image with le constructeur PhotoImage(file=path) and use l'argument image présent dans le constructeur Label 
+
+*myimage=tk.PhotoImage(file=chemin/vers/l'image)
+*mypicture=tk.Label(image=myimage)
+
+for les images au format autre que png and gif l'on devra use le module pillow
+
+
+.qu'est ce que la fonction lambda
+
+une fonction lambda est une fonction anonyme qui est utilisé pour des traitement opération simple et qui ne necessite pas de déclaration 
+elle est généralement utilisé une seul fois dans une ligne de code 
+
+lambda paramètre : expression 
+
+
+.Comment jouer avec la transparence des images pour faire des animations avec tkinter
+
+tkinter utilise l'hexa et le RGB pour manipulé les couleur mais on ne peut pas jouer directement avec la transparence d'une image avec tkinter 
+pour se fait l'on utilise le module Pillow pour le traitement proffessionnelle des images
+
+1.installer le module Pillow 
+-> pip install Pillow
+
+2.import les modules necessaire pour le traitement
+-> from PIL import Image, ImageTk
+
+3.ouvrir l'image
+creer une instance avec le constructeur open du module Image
+-> image=Image.open(PATH)
+
+4.convertir l'image en rgba et extraire le canal alpha
+->image=image.convert("RGBA")
+->r, g, b, a = image.split()/a=image.split()[3]
+
+5.modifier la transparence et restituer la couche alpha
+->alpha=a.point(lambda p: (taux de transparence)) 0 pour une transparence null 225 pour une transparence maximal
+->image.putalpha(a) 
+
+
+
+
+

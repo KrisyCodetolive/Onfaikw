@@ -19,17 +19,20 @@ dicoText={
 }
 
 
-def task(var_T,var_N,var_D,var_P):
+def task(var_T,var_N,var_D):
     
     
     root = tk.Tk()
-    root.configure(bg="#fff")
+    
+    root.configure(bg="#ffffff")
     root.title("Onfaikw.")
     root.geometry("320x500")
     
     #widget_Title
-    Title=ttk.Label(root,text=var_T,background="#fff",font=("inder",25))
+    
+    Title=ttk.Label(root,text=var_T,background="#fff",font=("inder",20))
     Title.pack()
+    # Title.place(relx=0.5,y=10)
     
     #widget_Name
     labelName=ttk.Label(root,text=var_N,font=("inder",20),background="white")
@@ -37,7 +40,7 @@ def task(var_T,var_N,var_D,var_P):
     EntryN=Ct.CTkEntry(
            root,
            border_width=0,
-           corner_radius=5,
+           corner_radius=20,
            width=200,
            fg_color="#D9D9D9",
            text_color="black",
@@ -49,7 +52,7 @@ def task(var_T,var_N,var_D,var_P):
     
     #widget_Describle
     labelDescrible=ttk.Label(root,text=var_D,font=("inder",20),background="white")
-    labelDescrible.place(x=20,y=150)
+    labelDescrible.place(x=15,y=130)
     TextboxD=Ct.CTkTextbox(
              root,
              corner_radius=5,
@@ -60,23 +63,17 @@ def task(var_T,var_N,var_D,var_P):
              font=("inder",18)
         
         )
-    TextboxD.place(x=20,y=190)
+    TextboxD.place(x=16,y=170)
     
     
-    #widget_Priority
-    OptionP=Ct.CTkOptionMenu(
-            root,
-            values=["haut","moyen","base"],
-            fg_color="#D9D9D9",
-            button_color="#D9D9D9",
-            text_color="black"
-    )
-    OptionP.set(var_P)
-    OptionP.place(x=20,y=300)
     
     
     #Color
-    Colors=C.Color(("#FBE5CB","#F28181","#949393"),(20,350),root)
+    Colors=C.Color(("#FBE5CB","#F28181","#949393"),(18,350),root)
+    
+    #widget_Priority
+    #Option
+    Option=C.Option(root,(18,297))
     
     
     
@@ -87,7 +84,7 @@ def task(var_T,var_N,var_D,var_P):
 task(
     dicoText["tf"],
     dicoText["nf"],
-    dicoText["df"],
-    dicoText["pf"]
+    dicoText["df"]
+    
     
     )

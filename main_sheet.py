@@ -16,6 +16,7 @@ def Main():
     # color=C.Color(("#FBE5CB","#F28181","#949393"),(50,50),root)
     # print(color.get_Color())
     color=C.Option(root,(10,10))
+    color=C.Color(("#FBE5CB","#F28181","#949393"),(10,50),root)
     # color=t.Color(("#FBE5CB","#F28181","#949393"),(50,50),root)
     root.mainloop()
     
