@@ -53,6 +53,46 @@ creer une instance avec le constructeur open du module Image
 ->alpha=a.point(lambda p: (taux de transparence)) 0 pour une transparence null 225 pour une transparence maximal
 ->image.putalpha(a) 
 
+.les evenements
+Pour mettre un evenements sur un widget de la fenetre 
+->widget.blind(<evenement>,fonction)
+
+fonction: qui sera appeler lorsque l'evenement est déclencher et s'exécute directement 
+nb:il est défini avec un parametre  "event"
+
+qlq evenement
+-<Button-1>          -> clique gauche
+-<Button-3>          -> clique droit
+-<Double-Button-1>   -> double clique
+-<ButtonRelease-1>   -> relaché un clique
+-<Leave>             -> lorsque le curseur quitte sur le widget
+-<Enter>             -> survole
+-<KeyPress> ou <Key> -> Déclenché lorsqu'une touche du clavier est enfoncée
+-<KeyRelease>        -> Déclenché lorsqu'une touche du clavier est relâchée
+
+
+.quelque methode (cget,set,insert,delete,...)
+
+ces methodes sont utiliser pour faire des actions sur un widget 
+
+-cget                            -> cette methode permet de recupérer des données 
+                                   de certains parametre de widget(bg,text,...)
+-> widget.cget("Text")
+
+-set                             -> cette faire des modification sur une variable de controle 
+-> variable.set(valeur)
+
+-config(tk)/configure(ctk)       -> pour modifier les valeurs attribuer a certain parametre
+-> variable.configure(parametre)=valeur
+
+-insert                          -> insere certain element dans une position spécifique 
+-> widget.insert(indexe,valeur) 
+
+-delete                          -> supprimer certain element dans une position spécifique
+-> variable.delete(indexe,valeur) nb: il est utiliser sur les widget qui affiche du texte
+                                      comment Lisbox,text,label,Entry
+                                    entry.delete(0, tk.END) permet de supprimer un texte entrer 
+                                    
 
 
 

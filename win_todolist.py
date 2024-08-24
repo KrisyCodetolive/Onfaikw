@@ -54,4 +54,4 @@ def todolist(var_T,var_N):
 
 
 
-todolist(dicoText["tf"],dicoText["nf"])
+# todolist(dicoText["tf"],dicoText["nf"])

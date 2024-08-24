@@ -1,5 +1,5 @@
 import tkinter as tk
-import widget as C 
+import code_source.win_widget as C 
 # import test as t 
 from tkinter import ttk
 import customtkinter as Ct

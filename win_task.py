@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-import widget as C 
+import code_source.win_widget as C 
 import customtkinter as Ct
 
 
@@ -21,18 +21,26 @@ dicoText={
 
 def task(var_T,var_N,var_D):
     
-    
+    def event_task(event):
+        
+        entry=EntryN.cget()
+        entry.delete(0,tk.END)
+        TextboxD=EntryN.cget()
+        TextboxD.delete(0,tk.END)
+        
+        pass
+    #initialisation de la fenetre
     root = tk.Tk()
-    
     root.configure(bg="#ffffff")
     root.title("Onfaikw.")
     root.geometry("320x500")
+    #initialisation de la fenetre
+    
     
     #widget_Title
-    
     Title=ttk.Label(root,text=var_T,background="#fff",font=("inder",20))
     Title.pack()
-    # Title.place(relx=0.5,y=10)
+    
     
     #widget_Name
     labelName=ttk.Label(root,text=var_N,font=("inder",20),background="white")
@@ -66,16 +74,15 @@ def task(var_T,var_N,var_D):
     TextboxD.place(x=16,y=170)
     
     
-    
-    
     #Color
     Colors=C.Color(("#FBE5CB","#F28181","#949393"),(18,350),root)
     
-    #widget_Priority
-    #Option
+    
+    #Option Priorité
     Option=C.Option(root,(18,297))
     
     
+    root.bind("<Return>",event_task)
     
     
     root.mainloop()
