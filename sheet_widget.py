@@ -173,7 +173,7 @@ class Menu:
         self.heightF=70
         self.border=2.7
         
-        self.add=tk.PhotoImage(file="/home/krisy/Bureau/Projet_/Logiciel_/Onfaikw./code_source/resset/ajouter.png")
+        self.add=tk.PhotoImage(file="/home/krisy/Bureau/Projet_/Logiciel_/Onfaikw./code_source/resset/Group 47.png")
         self.modifier=tk.PhotoImage(file="/home/krisy/Bureau/Projet_/Logiciel_/Onfaikw./code_source/resset/modifier.png")
         self.supprimer=tk.PhotoImage(file="/home/krisy/Bureau/Projet_/Logiciel_/Onfaikw./code_source/resset/supprimer(1).png")
         
@@ -188,7 +188,7 @@ class Menu:
                        corner_radius=27
                        )
         
-        self.Frame.place(relx=0.5,rely=0.87,anchor="center")
+        self.Frame.place(relx=0.5,rely=0.89,anchor="center")
         
         
         
